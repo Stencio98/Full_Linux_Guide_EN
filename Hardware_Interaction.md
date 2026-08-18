@@ -1,4 +1,4 @@
-#What type of architecture do I have?
+# What type of architecture do I have?
 ```
 uname -m
 # or similar command
