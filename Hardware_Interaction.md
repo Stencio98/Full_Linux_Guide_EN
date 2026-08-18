@@ -1,7 +1,9 @@
 # What type of architecture do I have?
 ```
 uname -m
-# or similar command
+```
+or
+```
 dpkg --print-architecture 
 ```
 * x86_64  --> Architecture 64 bit for CPU intel/AMD
