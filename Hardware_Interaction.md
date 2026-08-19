@@ -1,4 +1,4 @@
-# What type of architecture do I have?
+# WHAT TYPE OF ARCHITECTURE DO I HAVE?
 ```
 uname -m
 ```
@@ -11,7 +11,7 @@ dpkg --print-architecture
 * armv7 --> Architecture 32 bit for CPU ARM
 * aarch64 --> Architecture 64 bit for CPU ARM
 
-# Which disk was the session booted from?
+# WHICH DISK WAS THE SESSION BOOTED FROM?
 ```
 findmnt /
 ```
@@ -36,3 +36,9 @@ sdc        2T
 └─sdc1     2T
 ```
 * in this case the system is booted from the sda disk
+
+# COMPATIBLE DRIVERS FOR THE GPU
+
+- If Linux Mint’s Driver Manager only suggests version 390, there are a few possible explanations.
+- The most likely one is that the system is identifying your GT 730 as belonging to the family supported by driver 390, even though the PCI ID you showed (10de:1287) corresponds to a GK208B (Kepler).
+- The reason only 390 appears in Driver Manager is probably that Mint mainly shows the recommended desktop drivers and does not always expose the “server” packages as a normal choice for desktop users.
