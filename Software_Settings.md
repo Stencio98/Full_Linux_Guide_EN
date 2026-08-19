@@ -12,3 +12,7 @@ GRUB_TIMEOUT=5
 ```
 sudo update-grub         
 ```
+# LINUX MINT HUGE LAG GAMING WITH DRIVER INSTALED (nvidia)
+https://forums.linuxmint.com/viewtopic.php?p=2724077&hilit=game+lag+game+steam#p2724077
+it works, i disabled secure boot
+
