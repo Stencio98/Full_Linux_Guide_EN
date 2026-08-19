@@ -10,5 +10,5 @@ GRUB_TIMEOUT=5
 * comment the row with `GRUB_HIDDEN_TIMEOUT=0` with `#`
 * save and update GRUB:
 ```
-sudo update-grub          # su fedora cambia il comando
+sudo update-grub         
 ```
