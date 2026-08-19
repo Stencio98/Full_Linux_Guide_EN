@@ -1,3 +1,18 @@
+# UPDATE SYSTEM
+in linux mint i use this script, i reserved a line for flatpak update packages
+```
+# launch this script with sh
+echo "================================================================================"
+sudo apt-get clean && sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
+echo "================================================================================"
+flatpak update
+echo "================================================================================"
+lsb_release -a
+echo "================================================================================"
+exit
+```
+
+
 # FORCE GRUB TO SHOW
 ```
 sudo nano /etc/default/grub
