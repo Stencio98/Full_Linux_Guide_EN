@@ -101,18 +101,7 @@ Get your Tailscale IP
 tailscale ip -4
 ```
 # SSH WITH TAILSCALE
-If Tailscale SSH is enabled, you can connect like:
-```bash
-ssh user@device-name
-```
-or
-```bash
-ssh user@100.x.y.z
-```
-If you mean “use Tailscale SSH”
-On the target machine, you usually need:
-
 ```bash
 sudo tailscale up --ssh
 ```
-or enable SSH in the Tailscale admin console.
+--ssh: enable Tailscale SSH, that is, SSH access through the Tailscale network, using Tailscale's rules instead of classic SSH exposed on the Internet
