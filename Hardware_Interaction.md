@@ -84,3 +84,48 @@ options nouveau modeset=0
 sudo update-initramfs -u                                  # update initframs
 reboot                                                    # reboot system
 ```
+
+# MOUNT SECOND HDD AS ARCHIVE
+* let's identify disks and their loro UUID
+```
+:$ sudo blkid
+/dev/sda1: UUID="XXXX-XXXX" TYPE="ext4"
+/dev/sdb1: UUID="YYYY-YYYY" TYPE="ext4"
+```
+* edit following file:
+```
+sudo nano /etc/fstab
+```
+which contains the information needed to set up the system's storage devices, so we add the line:
+```
+UUID=YYYY-YYYY /mnt/dati ext4 defaults 0 2
+```
+at the end of the file, replacing UUID with the disk's UUID, /mnt/dati with the desired mount point (create the directory first if it doesn't exist), and ext4 with the disk's file system type, if needed. If we're not sure about the file system type, we can use `auto` as the option.
+
+* make mnt point:
+```
+sudo mkdir -p /mnt/dati
+```
+* we test the mounting with the following command that tries to mount all the file systems defined in `/etc/fstab`. If there are no errors, the disk will be mounted correctly:
+```
+sudo mount -a
+```
+* use `df` to see if the disk is rightlt mounted:
+```
+df -h
+```
+* if we want `samba` to point to the new mount point (if samba is not yet connected to the drive or the mount point has become different from the previous one and so samba “can’t find” the old shared folder):
+```
+[Dati]
+  path = /mnt/dati
+  available = yes
+  valid users = tuo_utente
+  read only = no
+  browsable = yes
+  public = yes
+  writable = yes
+```
+* reboot `samba`:
+```
+sudo systemctl restart smbd
+```
