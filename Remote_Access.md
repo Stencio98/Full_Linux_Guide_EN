@@ -100,6 +100,10 @@ Get your Tailscale IP
 ```bash
 tailscale ip -4
 ```
+to be sure tailscale will turn on automatically at pc start:
+```
+sudo systemctl enable --now tailscaled
+```
 # SSH WITH TAILSCALE
 ```bash
 sudo tailscale up --ssh
