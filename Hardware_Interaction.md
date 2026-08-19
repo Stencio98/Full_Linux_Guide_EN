@@ -129,3 +129,16 @@ df -h
 ```
 sudo systemctl restart smbd
 ```
+# DISABLE LAPTOP KAYBOARD
+list devices and find keyboard's id:
+```
+xinput list
+```
+disable keyboard (with keyboard's id):
+```
+xinput --disable ID
+```
+to enable back:
+```
+xinput --enable ID
+```
