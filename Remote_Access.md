@@ -109,3 +109,20 @@ sudo systemctl enable --now tailscaled
 sudo tailscale up --ssh
 ```
 --ssh: enable Tailscale SSH, that is, SSH access through the Tailscale network, using Tailscale's rules instead of classic SSH exposed on the Internet
+
+# SCRIPT FOR CHECK STATUS SAMBA AND TAILSCALE
+```
+# launch with sh
+echo "==============================="
+echo "=== CHECK SAMBA E TAILSCALE ==="
+echo "==============================="
+echo "\n\e[1msmbd (samba)\e[0m"
+systemctl is-active smbd
+echo "\n\e[1mnmbd (samba)\e[0m"
+systemctl is-active nmbd
+echo "\n\e[1mtailscale\e[0m"
+systemctl is-active tailscaled
+echo "\n\e[1mcheck tailscale ssh\e[0m"
+tailscale debug prefs | grep -i ssh
+
+```
