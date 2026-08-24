@@ -125,9 +125,14 @@ echo "\n\e[1msmbd (samba)\e[0m"
 systemctl is-active smbd
 echo "\n\e[1mnmbd (samba)\e[0m"
 systemctl is-active nmbd
+echo "\n\e[1mTailscale IP\e[0m"
+tailscale ip -4
 echo "\n\e[1mtailscale\e[0m"
 systemctl is-active tailscaled
 echo "\n\e[1mcheck tailscale ssh\e[0m"
 tailscale debug prefs | grep -i ssh
+echo "\n\e[1mTailscale status\e[0m"
+tailscale status
+
 
 ```
