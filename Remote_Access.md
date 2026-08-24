@@ -55,7 +55,7 @@ to see samba status:
 sudo service smbd status
 ```
 
-# SSH LAN GUIDE (great combo with tailscale)
+# SSH LAN GUIDE (great combo with tailscale and tailscale ssh)
 __a == client; b == server__
 install ssh service on __b__ (better both machines):
 ```
