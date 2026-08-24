@@ -104,6 +104,11 @@ to be sure tailscale will turn on automatically at pc start:
 ```
 sudo systemctl enable --now tailscaled
 ```
+stop service and disable auto run:
+```
+sudo systemctl stop tailscaled
+sudo systemctl disable tailscaled
+```
 # SSH WITH TAILSCALE
 ```bash
 sudo tailscale up --ssh
