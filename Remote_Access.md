@@ -118,21 +118,33 @@ sudo tailscale up --ssh
 # SCRIPT FOR CHECK STATUS SAMBA AND TAILSCALE
 ```
 # launch with sh
+# launch with sh
 echo "==============================="
 echo "=== CHECK SAMBA E TAILSCALE ==="
 echo "==============================="
-echo "\n\e[1msmbd (samba)\e[0m"
+echo "___________"
+echo "hostname -I"
+hostname -I
+echo "____________"
+echo "smbd (samba)"
 systemctl is-active smbd
-echo "\n\e[1mnmbd (samba)\e[0m"
+echo "____________"
+echo "nmbd (samba)"
 systemctl is-active nmbd
-echo "\n\e[1mTailscale IP\e[0m"
+echo "____________________"
+echo "samba port listening"
+ss -tulpn | grep -E '445|139'
+echo "_______________"
+echo "tailscale ip -4"
 tailscale ip -4
-echo "\n\e[1mtailscale\e[0m"
+echo "______________________________"
+echo "systemctl is-active tailscaled"
 systemctl is-active tailscaled
-echo "\n\e[1mcheck tailscale ssh\e[0m"
+echo "___________________"
+echo "check tailscale ssh"
 tailscale debug prefs | grep -i ssh
-echo "\n\e[1mTailscale status\e[0m"
+echo "________________"
+echo "tailscale status"
 tailscale status
-
 
 ```
