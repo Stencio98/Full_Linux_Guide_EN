@@ -1,6 +1,6 @@
 # GIT DELETE BRANCH
 the following script is made to easyly delete branch in local and remote git repository
-```
+``` bash
 #!/bin/bash
 
 # Verifica che sia stato passato il nome del ramo
