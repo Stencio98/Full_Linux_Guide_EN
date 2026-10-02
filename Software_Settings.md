@@ -31,3 +31,14 @@ sudo update-grub
 https://forums.linuxmint.com/viewtopic.php?p=2724077&hilit=game+lag+game+steam#p2724077
 it works, i disabled secure boot
 
+# WHICH GRAFIC SERVER IS RUNNING?
+
+```
+echo "\$XDG_SESSION_TYPE"
+```
+to check if both (wayland and xorg) are avaiable on machine:
+```
+ls /usr/share/wayland-sessions /usr/share/xsessions 2>/dev/null
+```
+The files in wayland-sessions show Wayland sessions, the ones in xsessions show Xorg sessions. 
+You can often pick them on the login screen via a little gear icon, but it depends on your distro and desktop environment.
