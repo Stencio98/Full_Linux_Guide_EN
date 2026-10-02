@@ -1,5 +1,5 @@
 # GIT DELETE BRANCH
-* the following script is made to easyly delete branch in local and remote git repository
+the following script is made to easyly delete branch in local and remote git repository
 ```
 #!/bin/bash
 
@@ -24,7 +24,7 @@ git fetch --prune
 
 echo "Ramo $BRANCH eliminato correttamente."
 ```
-* the script is saved in home/user folder like .bashrc, to run it easyly it's better build an alias that can be lanuched in git folder
+the script is saved in home/user folder like .bashrc, to run it easyly it's better build an alias that can be lanuched in git folder
 ```
 alias deletebranch='sh /....home/user/delete_branch.sh'
 ```
