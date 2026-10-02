@@ -34,7 +34,7 @@ it works, i disabled secure boot
 # WHICH GRAFIC SERVER IS RUNNING?
 
 ```
-echo "\$XDG_SESSION_TYPE"
+ps -e | grep -E 'Xorg|Xwayland|wayland'
 ```
 to check if both (wayland and xorg) are avaiable on machine:
 ```
