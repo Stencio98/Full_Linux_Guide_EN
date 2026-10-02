@@ -28,3 +28,7 @@ echo "Ramo $BRANCH eliminato correttamente."
 ```
 alias deletebranch='sh /....home/user/delete_branch.sh'
 ```
+the command to delete branch will be
+```
+deletebranch git_branch
+```
