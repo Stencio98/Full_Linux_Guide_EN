@@ -42,3 +42,6 @@ ls /usr/share/wayland-sessions /usr/share/xsessions 2>/dev/null
 ```
 The files in wayland-sessions show Wayland sessions, the ones in xsessions show Xorg sessions. 
 You can often pick them on the login screen via a little gear icon, but it depends on your distro and desktop environment.
+
+# VENTOY
+https://incastro.altervista.org/guida-completa-a-ventoy-su-linux-installazione-configurazione-e-rischi-da-evitare/
