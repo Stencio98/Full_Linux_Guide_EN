@@ -45,3 +45,14 @@ You can often pick them on the login screen via a little gear icon, but it depen
 
 # VENTOY
 https://incastro.altervista.org/guida-completa-a-ventoy-su-linux-installazione-configurazione-e-rischi-da-evitare/
+
+# DISABLE ANIMATION (ubuntu)
+```
+#disable
+gsettings set org.gnome.desktop.interface enable-animations false
+```
+```
+#enable
+gsettings set org.gnome.desktop.interface enable-animations true
+```
+this setting is persistent, you don't have to launch command every pc restart.
