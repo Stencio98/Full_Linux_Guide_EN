@@ -2,14 +2,19 @@
 in linux mint i use this script, i reserved a line for flatpak update packages
 ```
 # launch this script with sh
-echo "================================================================================"
 sudo apt-get clean && sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
-echo "================================================================================"
 flatpak update
-echo "================================================================================"
 lsb_release -a
-echo "================================================================================"
-exit
+```
+
+in ubuntu this one:
+```
+sudo apt-get clean
+sudo apt-get update
+sudo apt-get dist-upgrade
+sudo do-release-upgrade
+sudo apt-get autoremove
+sudo snap refresh
 ```
 
 
