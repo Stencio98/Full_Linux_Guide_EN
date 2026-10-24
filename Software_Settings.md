@@ -1,13 +1,6 @@
 # UPDATE SYSTEM
-in linux mint i use this script, i reserved a line for flatpak update packages
-```bash
-# launch this script with sh
-sudo apt-get clean && sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
-flatpak update
-lsb_release -a
-```
 
-in ubuntu this one:
+in ubuntu i use that commands:
 ```bash
 sudo apt-get clean          # Clear the local APT package cache.
 sudo apt-get update         # Refresh the list of available software packages.
@@ -15,6 +8,15 @@ sudo apt-get dist-upgrade   # Upgrade installed packages, potentially handling c
 sudo do-release-upgrade     # Upgrade Ubuntu to a newer Ubuntu release.
 sudo apt-get autoremove     # Remove packages that are no longer needed.
 sudo snap refresh           # Update applications installed through Snap.
+```
+
+in debian:
+```bash
+sudo apt clean
+sudo apt update
+sudo apt full-upgrade
+sudo apt autoremove
+#here u can insert a line for snap or flatpak packages
 ```
 
 
