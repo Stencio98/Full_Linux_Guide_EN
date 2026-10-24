@@ -1,6 +1,6 @@
 # UPDATE SYSTEM
 in linux mint i use this script, i reserved a line for flatpak update packages
-```
+```bash
 # launch this script with sh
 sudo apt-get clean && sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 flatpak update
@@ -8,13 +8,13 @@ lsb_release -a
 ```
 
 in ubuntu this one:
-```
-sudo apt-get clean
-sudo apt-get update
-sudo apt-get dist-upgrade
-sudo do-release-upgrade
-sudo apt-get autoremove
-sudo snap refresh
+```bash
+sudo apt-get clean          # Clear the local APT package cache.
+sudo apt-get update         # Refresh the list of available software packages.
+sudo apt-get dist-upgrade   # Upgrade installed packages, potentially handling changes to package dependencies.
+sudo do-release-upgrade     # Upgrade Ubuntu to a newer Ubuntu release.
+sudo apt-get autoremove     # Remove packages that are no longer needed.
+sudo snap refresh           # Update applications installed through Snap.
 ```
 
 
