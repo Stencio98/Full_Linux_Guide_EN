@@ -63,3 +63,13 @@ gsettings set org.gnome.desktop.interface enable-animations false
 gsettings set org.gnome.desktop.interface enable-animations true
 ```
 this setting is persistent, you don't have to launch command every pc restart.
+
+# INSTALL FLATPAK ON DEBIAN
+```
+sudo apt update
+sudo apt install flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+sudo apt install gnome-software-plugin-flatpak #plug in for software manager (based on desktop in use (GNOME, Xfce, ecc..)
+```
+
