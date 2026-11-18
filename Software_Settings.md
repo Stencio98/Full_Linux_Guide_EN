@@ -79,5 +79,8 @@ $ cat diff.diff | grep --color=always -C 15 "Get_Airspeed_Validity"
 # cat diff.diff | sends the file’s contents to grep.
 # grep prints each matching line plus up to 15 lines before and after it (-C 15).
 # --color=always highlights the matching text in color.
+
+# You can write the same command more simply, without cat:
+grep --color=always -C 15 "Get_Airspeed_Validity" diff.diff
 ```
 
