@@ -72,4 +72,12 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 
 sudo apt install gnome-software-plugin-flatpak #plug in for software manager (based on desktop in use (GNOME, Xfce, ecc..)
 ```
+# TERMINAL INTERESTS COMMANDS
+```bash
+$ cat diff.diff | grep --color=always -C 15 "Get_Airspeed_Validity"
+# It searches the contents of diff.diff for the exact, case-sensitive text Get_Airspeed_Validity.
+# cat diff.diff | sends the file’s contents to grep.
+# grep prints each matching line plus up to 15 lines before and after it (-C 15).
+# --color=always highlights the matching text in color.
+```
 
