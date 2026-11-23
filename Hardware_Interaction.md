@@ -1,3 +1,10 @@
+# Firmware Updater
+```bash
+# check update
+fwupdmgr refresh
+fwupdmgr get-updates
+```
+
 # WHAT TYPE OF ARCHITECTURE DO I HAVE?
 ```
 uname -m
