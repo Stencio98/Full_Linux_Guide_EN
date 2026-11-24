@@ -18,6 +18,12 @@ sudo apt full-upgrade
 sudo apt autoremove
 #here u can insert a line for snap or flatpak packages
 ```
+sometimes check firmware updater
+```
+# check update
+fwupdmgr refresh
+fwupdmgr get-updates
+```
 
 
 # FORCE GRUB TO SHOW
